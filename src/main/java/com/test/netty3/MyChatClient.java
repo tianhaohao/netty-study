@@ -20,6 +20,7 @@ public class MyChatClient {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             for (; ; ) {
                 channel.writeAndFlush(br.readLine()+"\n");
+                System.out.println("dfs");
             }
         } finally {
             eventLoopGroup.shutdownGracefully();
