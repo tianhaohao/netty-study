@@ -1,8 +1,8 @@
 # netty-study
 学习netty
  
-##北京圣思园教育
+## 北京圣思园教育
 
-#开发环境
+# 开发环境
 
 windows idea
