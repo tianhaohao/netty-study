@@ -1,11 +1,31 @@
 syntax = "proto2";
 package com.test.netty_protobuf;
-option optimize_for =SPEED;
+option optimize_for = SPEED;
 option java_package = "com.test.netty_protobuf";
 option java_outer_classname = "MyDataInfo";
-message Persion{
-    required string name = 1;
+message MyMessage {
+    enum DataType {
+        PersionType=1;
+        DogType=2;
+        CatTyp=3;
+    }
+    required DataType data_type=1;
+    oneof dataBody{
+        Persion persion=2;
+        Dog dog=3;
+        Cat cat=4;
+    }
+}
+message Persion {
+    optional string name = 1;
     optional int32 age = 2;
     optional string address = 3;
-
+}
+message Dog {
+    optional string name = 1;
+    optional int32 age = 2;
+}
+message Cat {
+    optional string name = 1;
+    optional string city = 2;
 }
