@@ -1,0 +1,11 @@
+syntax = "proto2";
+package com.test.netty_protobuf;
+option optimize_for =SPEED;
+option java_package = "com.test.netty_protobuf";
+option java_outer_classname = "MyDataInfo";
+message Persion{
+    required string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+
+}
